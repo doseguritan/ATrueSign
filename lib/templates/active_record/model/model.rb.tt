@@ -1,0 +1,9 @@
+<% module_namespacing do -%>
+class <%= class_name %> < ApplicationRecord
+<%- unless options[:skip_org] -%>
+  # Add organization association by default
+  acts_as_tenant(:organization)
+  belongs_to :organization
+<% end -%>
+end
+<% end -%>

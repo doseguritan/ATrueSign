@@ -1,0 +1,13 @@
+<% module_namespacing do -%>
+class <%= class_name %>Controller < ResourceController
+  # uncomment to bypass authentication
+  # before_action :doorkeeper_authorize!
+  # uncomment to ignore tenant
+  # before_action :set_current_tenant
+<% actions.each do |action| -%>
+
+  def <%= action %>
+  end
+<% end -%>
+end
+<% end %>

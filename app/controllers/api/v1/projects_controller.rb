@@ -1,0 +1,6 @@
+class Api::V1::ProjectsController < AdminCrudController
+  # uncomment to bypass authentication
+  # before_action :doorkeeper_authorize!
+  # uncomment to ignore tenant
+  # before_action :set_current_tenant
+end
